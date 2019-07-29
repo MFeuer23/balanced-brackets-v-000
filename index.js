@@ -4,18 +4,14 @@ function isBalanced(str) {
   }
   
   let bracketsLeft = ["{", "[", "("]
-  let bracketsRight = ["}", "}", ")"]
+  let bracketsRight = ["}", "]", ")"]
+  
+  let answer = 0;
+  let count = 0;
   
   for (let i = 0; i < str.length; i++) {
-    if (bracketsLeft.indexOf(str[i]) > -1) {
-      let left = bracketsLeft.indexOf(str[i])
-      let right = str.indexOf(bracketsRight[left])
-      if (Math.abs(left - right) % 2 !== 0) {
-        return false
-      } else {
-        return true
-      }
+    
         
-    } 
+
   }
 }
