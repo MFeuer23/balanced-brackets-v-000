@@ -12,11 +12,26 @@ function isBalanced(str) {
   
   for (let i = 0; i < str.length; i++) {
     if (str[i] === '{') {
-      curly ++;
+      curly++;
     } else if (str[i] === '}') {
-      curly --;
+      curly--;
     }
-        
-
+    
+    if (str[i] === '[') {
+      square++;
+    } else if (str[i] === ']') {
+      square--;
+    }
+    
+    if (str[i] === '(') {
+      parenthesis++;
+    } else if (str[i] === ')') {
+      parenthesis--;
+    }
+  }
+  if (curly === 0 && square === 0 && parenthesis === 0) {
+    return true
+  } else {
+    return false;
   }
 }
