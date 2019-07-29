@@ -6,11 +6,16 @@ function isBalanced(str) {
   let bracketsLeft = ["{", "[", "("]
   let bracketsRight = ["}", "]", ")"]
   
-  let answer = 0;
-  let count = 0;
+  let curly = 0;
+  let square = 0;
+  let parenthesis = 0;
   
   for (let i = 0; i < str.length; i++) {
-    
+    if (str[i] === '{') {
+      curly ++;
+    } else if (str[i] === '}') {
+      curly --;
+    }
         
 
   }
